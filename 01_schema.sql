@@ -72,8 +72,8 @@ CREATE TABLE tp1Route
  pRoute 		VARCHAR(30) 	NOT NULL,
  cRoute 		VARCHAR(30) 	NOT NULL,
  nLatOri 	FLOAT(8) 	NOT NULL,
- nLatDes 		FLOAT(8) 		NOT NULL,
  nLongOri 	FLOAT(8) 	NOT NULL,
+ nLatDes 		FLOAT(8) 		NOT NULL,
  nLongDes 		FLOAT(8) 		NOT NULL,
  nDistance 		FLOAT(8) 		NOT NULL,
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
