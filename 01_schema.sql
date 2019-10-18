@@ -33,7 +33,7 @@ CREATE TABLE tp1Client
  nomClient 		VARCHAR(20) 	NOT NULL,
  prenomClient 		VARCHAR(20) 	NOT NULL,
  noTelephone 	VARCHAR(15) 	NOT NULL,
- email 	VARCHAR(15) 	NOT NULL,
+ email 	VARCHAR 	NOT NULL,
  PRIMARY KEY 	(pClient)
 )
 /
