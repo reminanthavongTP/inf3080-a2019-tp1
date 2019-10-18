@@ -67,7 +67,7 @@ CREATE TABLE tp1Proposition
  pSoumission 		INTEGER 		NOT NULL,
  datePickup 	DATE 	NOT NULL,
  dateDelivery 		DATE 		NOT NULL,
- estimation		FLOAT(3) 		NOT NULL,
+ prixLivraison		FLOAT(6) 		NOT NULL,
  tCamion		VARCHAR(20) 		NOT NULL,
  prixCarburant 	FLOAT(8) 	NOT NULL,
  consommation 		FLOAT(8) 		NOT NULL,
