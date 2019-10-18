@@ -25,7 +25,7 @@ CREATE TABLE tp1Client
  nomClient 		VARCHAR(20) 	NOT NULL,
  prenomClient 		VARCHAR(20) 	NOT NULL,
  noTelephone 	VARCHAR(15) 	NOT NULL,
- email 	VARCHAR 	NOT NULL,
+ email 	VARCHAR(50) 	NOT NULL,
  PRIMARY KEY 	(pClient)
 )
 /
@@ -58,7 +58,7 @@ CREATE TABLE tp1Route
  nLatDes 		FLOAT(8) 		NOT NULL,
  nLongDes 		FLOAT(8) 		NOT NULL,
  nDistance 		FLOAT(8) 		NOT NULL,
- PRIMARY KEY 	(pRoute) 	    NOT NULL,
+ PRIMARY KEY 	(pRoute),
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
 /
@@ -101,7 +101,7 @@ CREATE TABLE tp1TypeEquipement
  pTypeEquipement INTEGER NOT NULL,
  cTypeEquipement VARCHAR(30) NOT NULL,
  nCout FLOAT(8) NOT NULL,
- PRIMARY KEY    (pTypeEquipement)  NOT NULL,
+ PRIMARY KEY    (pTypeEquipement),
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
 )
 /
@@ -112,7 +112,7 @@ CREATE TABLE tp1Position
  nLat 	FLOAT(8) 	NOT NULL,
  nLong 	FLOAT(8) 	NOT NULL,
  nDisponible		INTEGER		NOT NULL,
- PRIMARY KEY    (pPosition)  NOT NULL,
+ PRIMARY KEY    (pPosition),
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
 )
 /
