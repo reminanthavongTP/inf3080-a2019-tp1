@@ -19,16 +19,16 @@ CREATE TABLE tp1DemandeSoumission
  destination 		VARCHAR(20) 	NOT NULL,
  dateSoumission 	DATE 	NOT NULL,
  pClient 		INTEGER 		NOT NULL,
- PRIMARY KEY 	(pSoumission)
+ PRIMARY KEY 	(pSoumission),
  FOREIGN KEY 	(pClient) REFERENCES tp1Client
 )
 /
 CREATE TABLE tp1Requis
 (pSoumission 		INTEGER 		NOT NULL,
- refrigerated 		BIT 	NOT NULL,
- dock 		BIT 	NOT NULL,
- hazardous 	BIT 	NOT NULL,
- rush 		BIT 		NOT NULL,
+ refrigerated 		INTEGER	NOT NULL,
+ dock 		INTEGER 	NOT NULL,
+ hazardous 	INTEGER 	NOT NULL,
+ rush 		INTEGER 		NOT NULL,
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
 /
@@ -70,7 +70,7 @@ CREATE TABLE tp1Proposition
  dateDelivery 		DATE 		NOT NULL,
  estimation		FLOAT(3) 		NOT NULL,
  tCamion		VARCHAR(20) 		NOT NULL,
- PRIMARY KEY 	(pProposition)
+ PRIMARY KEY 	(pProposition),
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
 /
@@ -86,7 +86,7 @@ CREATE TABLE tp1Compagnie
 CREATE TABLE tp1Camion
 (pCamion 		INTEGER 		NOT NULL,
  pCompagnie 		INTEGER 		NOT NULL,
- PRIMARY KEY 	(pCamion)
+ PRIMARY KEY 	(pCamion),
  FOREIGN KEY 	(pCompagnie) REFERENCES tp1Compagnie
 )
 /
@@ -104,7 +104,7 @@ CREATE TABLE tp1Position
  cPosition 		VARCHAR(30) 	NOT NULL,
  nLat 	FLOAT(8) 	NOT NULL,
  nLong 	FLOAT(8) 	NOT NULL,
- nDisponible		BIT		NOT NULL,
+ nDisponible		INTEGER		NOT NULL,
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
 )
 /
