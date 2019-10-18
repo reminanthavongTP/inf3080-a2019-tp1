@@ -41,7 +41,7 @@ CREATE TABLE tp1DemandeSoumission
  lenght		FLOAT 	NOT NULL,
  width 		FLOAT  	NOT NULL,
  height 	FLOAT  	NOT NULL,
- quantity 	FLOAT  	NOT NULL,
+ quantity 	INTEGER  	NOT NULL,
  hours 	FLOAT  	NOT NULL,
  valeur 	INTEGER  	NOT NULL,
  pClient 		INTEGER 		NOT NULL,
