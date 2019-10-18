@@ -181,40 +181,40 @@ INSERT INTO tp1Camion
  	VALUES(6,3,11.7,6.0,5.5,396.0)
 /
 INSERT INTO tp1TypeEquipement
- 	VALUES(1,0,'NonTracteur',0.02)
+ 	VALUES(1,001,'NonTracteur',0.02)
 /
 INSERT INTO tp1TypeEquipement
- 	VALUES(2,1,'AvecTracteur',0.05)
+ 	VALUES(2,002,'AvecTracteur',0.05)
 /
 INSERT INTO tp1TypeEquipement
- 	VALUES(3,0,'NonTracteur',0.02)
+ 	VALUES(3,003,'NonTracteur',0.02)
 /
 INSERT INTO tp1TypeEquipement
- 	VALUES(4,1,'AvecTracteur',0.05)
+ 	VALUES(4,004,'AvecTracteur',0.05)
 /
 INSERT INTO tp1TypeEquipement
- 	VALUES(5,0,'NonTracteur',0.02)
+ 	VALUES(5,005,'NonTracteur',0.02)
 /
 INSERT INTO tp1TypeEquipement
- 	VALUES(6,1,'AvecTracteur',0.05)
+ 	VALUES(6,006,'AvecTracteur',0.05)
 /
 INSERT INTO tp1Position
- 	VALUES(1,'GARAGEEarenam','GarageTORONTO',43.6532,79.3832,1)
+ 	VALUES(1,'Earenam1','GarageTORONTO',43.6532,79.3832,1)
 /
 INSERT INTO tp1Position
- 	VALUES(2,'GARAGEEarenam','GarageTORONTO',43.6532,79.3832,1)
+ 	VALUES(2,'Earenam2','GarageTORONTO',43.6532,79.3832,1)
 /
 INSERT INTO tp1Position
- 	VALUES(3,'GARAGEArearn','GarageMONTREAL',45.5017,73.5673,1)
+ 	VALUES(3,'Arearn1','GarageMONTREAL',45.5017,73.5673,1)
 /
 INSERT INTO tp1Position
- 	VALUES(4,'GARAGEArearn','GarageMONTREAL',45.5017,73.5673,1)
+ 	VALUES(4,'Arearn2','GarageMONTREAL',45.5017,73.5673,1)
 /
 INSERT INTO tp1Position
- 	VALUES(5,'GARAGESenoine','GarageCALGARY',51.0447,114.0719,1)
+ 	VALUES(5,'Senoine1','GarageCALGARY',51.0447,114.0719,1)
 /
 INSERT INTO tp1Position
- 	VALUES(6,'GARAGESenoine','GarageCALGARY',51.0447,114.0719,1)
+ 	VALUES(6,'Senoine2','GarageCALGARY',51.0447,114.0719,1)
 /
 COMMIT
 /
