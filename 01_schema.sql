@@ -80,7 +80,7 @@ CREATE TABLE tp1Compagnie
 (pCompagnie 		INTEGER 		NOT NULL,
  nomCompagnie 		VARCHAR(20) 	NOT NULL,
  noTelephone 	VARCHAR(15) 	NOT NULL,
- email 	VARCHAR(15) 	NOT NULL,
+ email 	VARCHAR(50) 	NOT NULL,
  nbCamion INTEGER NOT NULL,
  PRIMARY KEY 	(pCompagnie)
 )
