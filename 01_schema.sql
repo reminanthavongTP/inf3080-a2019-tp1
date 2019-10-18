@@ -63,7 +63,7 @@ CREATE TABLE tp1Varias
  height 	FLOAT  	NOT NULL,
  quantity 	FLOAT  	NOT NULL,
  hours 	FLOAT  	NOT NULL,
- valeur 	FLOAT  	NOT NULL,
+ valeur 	INTEGER  	NOT NULL,
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
 /
