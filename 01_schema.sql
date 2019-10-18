@@ -1,9 +1,33 @@
 SET ECHO ON
--- Script Oracle SQL*plus de creation du schema VentesPleinDeFoin 
+-- Script Oracle SQL*plus de creation du schema travail pratique 1 - Modélisation et Conception d'une BD
 -- Version sans accents
-
+-- Enlever les tables existantes
 -- Creation des tables
 SET ECHO ON
+DROP TABLE tp1Client CASCADE CONSTRAINTS
+/
+DROP TABLE tp1DemandeSoumission CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Requis CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Varias CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Route CASCADE CONSTRAINTS
+/
+DROP TABLE tp1FacteurPrix CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Proposition CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Compagnie CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Camion CASCADE CONSTRAINTS
+/
+DROP TABLE tp1TypeEquipement CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Position CASCADE CONSTRAINTS
+/
+DROP TABLE tp1Remorque CASCADE CONSTRAINTS
+/
 CREATE TABLE tp1Client
 (pClient 		INTEGER 		NOT NULL,
  nomClient 		VARCHAR(20) 	NOT NULL,
