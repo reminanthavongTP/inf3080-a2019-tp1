@@ -4,37 +4,37 @@ SET ECHO ON
 -- INSERTION dans les tables
 SET ECHO ON
 INSERT INTO tp1Client
- 	VALUES(1,'Luc','Samson','(999)999-9999',"luc.samson@email.ca")
+ 	VALUES(1,'Luc','Samson','(999)999-9999','luc.samson@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(2,'Oliwia','Beltran','(514)999-9999',"oliwia.beltran@email.ca")
+ 	VALUES(2,'Oliwia','Beltran','(514)999-9999','oliwia.beltran@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(3,'Kaidan','Key','(450)999-9999',"kaidan.key@email.ca")
+ 	VALUES(3,'Kaidan','Key','(450)999-9999','kaidan.key@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(4,'Ahmet','Benjamin','(418)999-9999',"ahmet.benjamin@email.ca")
+ 	VALUES(4,'Ahmet','Benjamin','(418)999-9999','ahmet.benjamin@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(5,'Shiv','Gardner','(403)999-9999',"sgardner@email.ca")
+ 	VALUES(5,'Shiv','Gardner','(403)999-9999','sgardner@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(6,'Keelan','Tran','(204)999-9999',"ktran@email.ca")
+ 	VALUES(6,'Keelan','Tran','(204)999-9999','ktran@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(7,'Kajol','Boyle','(709)999-9999',"kajol.boyle@email.ca")
+ 	VALUES(7,'Kajol','Boyle','(709)999-9999','kajol.boyle@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(8,'Shuaib','Kaiser','(613)999-9999',"Shuaib.Kaiser@email.ca")
+ 	VALUES(8,'Shuaib','Kaiser','(613)999-9999','Shuaib.Kaiser@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(9,'Saqlain','Kemp','(226)999-9999',"Saqlain.Kemp@email.ca")
+ 	VALUES(9,'Saqlain','Kemp','(226)999-9999','Saqlain.Kemp@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(10,'Junayd','Head','(519)999-9999',"Junayd.Head@email.ca")
+ 	VALUES(10,'Junayd','Head','(519)999-9999','Junayd.Head@email.ca')
 /
 INSERT INTO tp1Client
- 	VALUES(11,'Abdulahi','Church','(306)999-9999',"Abdulahi.Church@email.ca")
+ 	VALUES(11,'Abdulahi','Church','(306)999-9999','Abdulahi.Church@email.ca')
 /
 INSERT INTO tp1DemandeSoumission
  	VALUES(000001,'Toronto','Ottawa','2019/10/18',0,0,0,0,6.0,3.0,7.0,1,1.0,200.00,1)
@@ -154,13 +154,13 @@ INSERT INTO tp1Proposition
  	VALUES(000013,000013,'2019/10/17','2019/10/18',5.00,1,1.20,0.83)
 /
 INSERT INTO tp1Compagnie
- 	VALUES(1,'Earenam','(999)888-9999',"Earenam,@transport.ca",2)
+ 	VALUES(1,'Earenam','(999)888-9999','Earenam,@transport.ca',2)
 /
 INSERT INTO tp1Compagnie
- 	VALUES(2,'Arearn','(514)777-9999',"Arearn@transport.ca",2)
+ 	VALUES(2,'Arearn','(514)777-9999','Arearn@transport.ca',2)
 /
 INSERT INTO tp1Compagnie
- 	VALUES(3,'Senoine','(450)666-9999',"Senoine@transport.ca",2)
+ 	VALUES(3,'Senoine','(450)666-9999','Senoine@transport.ca',2)
 /
 INSERT INTO tp1Camion
  	VALUES(1,1,8.0,4.8,5.4,208.0)
