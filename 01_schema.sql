@@ -8,13 +8,7 @@ DROP TABLE tp1Client CASCADE CONSTRAINTS
 /
 DROP TABLE tp1DemandeSoumission CASCADE CONSTRAINTS
 /
-DROP TABLE tp1Requis CASCADE CONSTRAINTS
-/
-DROP TABLE tp1Varias CASCADE CONSTRAINTS
-/
 DROP TABLE tp1Route CASCADE CONSTRAINTS
-/
-DROP TABLE tp1FacteurPrix CASCADE CONSTRAINTS
 /
 DROP TABLE tp1Proposition CASCADE CONSTRAINTS
 /
@@ -25,8 +19,6 @@ DROP TABLE tp1Camion CASCADE CONSTRAINTS
 DROP TABLE tp1TypeEquipement CASCADE CONSTRAINTS
 /
 DROP TABLE tp1Position CASCADE CONSTRAINTS
-/
-DROP TABLE tp1Remorque CASCADE CONSTRAINTS
 /
 CREATE TABLE tp1Client
 (pClient 		INTEGER 		NOT NULL,
@@ -42,29 +34,19 @@ CREATE TABLE tp1DemandeSoumission
  origine 		VARCHAR(20) 	NOT NULL,
  destination 		VARCHAR(20) 	NOT NULL,
  dateSoumission 	DATE 	NOT NULL,
- pClient 		INTEGER 		NOT NULL,
- PRIMARY KEY 	(pSoumission),
- FOREIGN KEY 	(pClient) REFERENCES tp1Client
-)
-/
-CREATE TABLE tp1Requis
-(pSoumission 		INTEGER 		NOT NULL,
  refrigerated 		INTEGER	NOT NULL,
  dock 		INTEGER 	NOT NULL,
  hazardous 	INTEGER 	NOT NULL,
  rush 		INTEGER 		NOT NULL,
- FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
-)
-/
-CREATE TABLE tp1Varias
-(pSoumission 		INTEGER 		NOT NULL,
  lenght		FLOAT 	NOT NULL,
  width 		FLOAT  	NOT NULL,
  height 	FLOAT  	NOT NULL,
  quantity 	FLOAT  	NOT NULL,
  hours 	FLOAT  	NOT NULL,
  valeur 	INTEGER  	NOT NULL,
- FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
+ pClient 		INTEGER 		NOT NULL,
+ PRIMARY KEY 	(pSoumission),
+ FOREIGN KEY 	(pClient) REFERENCES tp1Client
 )
 /
 CREATE TABLE tp1Route
@@ -76,14 +58,7 @@ CREATE TABLE tp1Route
  nLatDes 		FLOAT(8) 		NOT NULL,
  nLongDes 		FLOAT(8) 		NOT NULL,
  nDistance 		FLOAT(8) 		NOT NULL,
- FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
-)
-/
-CREATE TABLE tp1FacteurPrix
-(pSoumission 		INTEGER 		NOT NULL,
- prixCarburant 	FLOAT(8) 	NOT NULL,
- consommation 		FLOAT(8) 		NOT NULL,
- margeProfit		FLOAT(3) 		DEFAULT 1.18,
+ PRIMARY KEY 	(pRoute) 	    NOT NULL,
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
 /
@@ -94,6 +69,9 @@ CREATE TABLE tp1Proposition
  dateDelivery 		DATE 		NOT NULL,
  estimation		FLOAT(3) 		NOT NULL,
  tCamion		VARCHAR(20) 		NOT NULL,
+ prixCarburant 	FLOAT(8) 	NOT NULL,
+ consommation 		FLOAT(8) 		NOT NULL,
+ margeProfit		FLOAT(3) 		DEFAULT 1.18,
  PRIMARY KEY 	(pProposition),
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
@@ -110,6 +88,10 @@ CREATE TABLE tp1Compagnie
 CREATE TABLE tp1Camion
 (pCamion 		INTEGER 		NOT NULL,
  pCompagnie 		INTEGER 		NOT NULL,
+ lenght		FLOAT 	NOT NULL,
+ width 		FLOAT  	NOT NULL,
+ height 	FLOAT  	NOT NULL,
+ capacity	FLOAT  	NOT NULL,
  PRIMARY KEY 	(pCamion),
  FOREIGN KEY 	(pCompagnie) REFERENCES tp1Compagnie
 )
@@ -119,6 +101,7 @@ CREATE TABLE tp1TypeEquipement
  pTypeEquipement INTEGER NOT NULL,
  cTypeEquipement VARCHAR(30) NOT NULL,
  nCout FLOAT(8) NOT NULL,
+ PRIMARY KEY    (pTypeEquipement)  NOT NULL,
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
 )
 /
@@ -129,15 +112,7 @@ CREATE TABLE tp1Position
  nLat 	FLOAT(8) 	NOT NULL,
  nLong 	FLOAT(8) 	NOT NULL,
  nDisponible		INTEGER		NOT NULL,
- FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
-)
-/
-CREATE TABLE tp1Remorque
-(pCamion 		INTEGER 		NOT NULL,
- lenght		FLOAT 	NOT NULL,
- width 		FLOAT  	NOT NULL,
- height 	FLOAT  	NOT NULL,
- capacity	FLOAT  	NOT NULL,
+ PRIMARY KEY    (pPosition)  NOT NULL,
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
 )
 /
