@@ -15,8 +15,6 @@ CREATE TABLE tp1TestClient
  PRIMARY KEY 	(pClient)
 )
 /
-COMMIT
-/
 SET ECHO ON
 -- 
 -- Devrait fonctionner
