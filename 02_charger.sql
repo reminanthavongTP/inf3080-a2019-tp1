@@ -79,10 +79,10 @@ INSERT INTO tp1Route
  	VALUES(000001,'exarij','Toronto-Ottawa',43.6532,79.3832,45.4215,75.6972,352.1)
 /
 INSERT INTO tp1Route
- 	VALUES(000002,'ahiyut','Calgary-Montreal',51.0447,114.0719,45.5017,73.5673,3020.0)
+ 	VALUES(000002,'ahiyut','Calgary-Montreal',51.0447,114.071,45.5017,73.5673,3020.0)
 /
 INSERT INTO tp1Route
- 	VALUES(000003,'imewak','Vancouver-Ottawa',49.2827,123.1207,45.4215,75.6972,3539.0)
+ 	VALUES(000003,'imewak','Vancouver-Ottawa',49.2827,123.120,45.4215,75.6972,3539.0)
 /
 INSERT INTO tp1Route
  	VALUES(000004,'agogox','Quebec-Toronto',46.8139,71.2080,43.6532,79.3832,729.8)
@@ -91,16 +91,16 @@ INSERT INTO tp1Route
  	VALUES(000005,'eximew','Montreal-Toronto',45.5017,73.5673,43.6532,79.3832,504.3)
 /
 INSERT INTO tp1Route
- 	VALUES(000006,'aqikij','Montreal-Regina',45.5017,73.5673,50.4452,104.6189,2357.0)
+ 	VALUES(000006,'aqikij','Montreal-Regina',45.5017,73.5673,50.4452,104.618,2357.0)
 /
 INSERT INTO tp1Route
- 	VALUES(000007,'ezahag','Edmonton-Ottawa',53.5461,113.4938,45.4215,75.6972,2837.0)
+ 	VALUES(000007,'ezahag','Edmonton-Ottawa',53.5461,113.493,45.4215,75.6972,2837.0)
 /
 INSERT INTO tp1Route
  	VALUES(000008,'avitiq','Mississauga-Ottawa',43.5890,79.6441,45.4215,75.6972,373.4)
 /
 INSERT INTO tp1Route
- 	VALUES(000009,'eracos','Winnipeg-Edmonton',49.8951,97.1384,53.5461,113.4938,1194.0)
+ 	VALUES(000009,'eracos','Winnipeg-Edmonton',49.8951,97.1384,53.5461,113.493,1194.0)
 /
 INSERT INTO tp1Route
  	VALUES(000010,'ocesas','Toronto-Mississauga',43.6532,79.3832,43.5890,79.6441,22.18)
@@ -109,7 +109,7 @@ INSERT INTO tp1Route
  	VALUES(000011,'ukocuy','Winnipeg-Brampton',49.8951,97.1384,43.7315,79.7624,1484.0)
 /
 INSERT INTO tp1Route
- 	VALUES(000012,'idemoq','Edmonton-Hamilton',53.5461,113.4938,43.2557,79.8711,2700.0)
+ 	VALUES(000012,'idemoq','Edmonton-Hamilton',53.5461,113.493,43.2557,79.8711,2700.0)
 /
 INSERT INTO tp1Route
  	VALUES(000013,'ozihiv','Hamilton-Mississauga',43.2557,79.8711,43.5890,79.6441,41.35)
