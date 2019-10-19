@@ -8,6 +8,8 @@ DROP TABLE tp1Client CASCADE CONSTRAINTS
 /
 DROP TABLE tp1TestDemandeSoumission CASCADE CONSTRAINTS
 /
+DROP TABLE tp1TestCompagnie
+/
 CREATE TABLE tp1TestClient
 (pClient 		INTEGER 		NOT NULL,
  nomClient 		VARCHAR(20) 	NOT NULL,
@@ -72,10 +74,10 @@ CREATE TABLE tp1TestCompagnie
  PRIMARY KEY 	(pCompagnie)
 )
 /
-INSERT INTO tp1Compagnie
+INSERT INTO tp1TestCompagnie
  	VALUES(1,'Earenam','(999)888-9999','Earenam,@transport.ca',2)
 /
-INSERT INTO tp1Compagnie
+INSERT INTO tp1TestCompagnie
  	VALUES('XYZ','Arearn','(514)777-9999','Arearn@transport.ca',2)
 /
 COMMIT
