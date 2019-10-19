@@ -63,5 +63,20 @@ INSERT INTO tp1TestDemandeSoumission
 INSERT INTO tp1TestDemandeSoumission
  	VALUES(000002,'Toronto','Ottawa','2019/10/18','Oui',0,0,0,6.0,3.0,7.0,1,1.0,200.00,1)
 /
+CREATE TABLE tp1TestCompagnie
+(pCompagnie 		INTEGER 		NOT NULL,
+ nomCompagnie 		VARCHAR(20) 	NOT NULL,
+ noTelephone 	VARCHAR(15) 	NOT NULL,
+ email 	VARCHAR(50) 	NOT NULL,
+ nbCamion INTEGER NOT NULL,
+ PRIMARY KEY 	(pCompagnie)
+)
+/
+INSERT INTO tp1Compagnie
+ 	VALUES(1,'Earenam','(999)888-9999','Earenam,@transport.ca',2)
+/
+INSERT INTO tp1Compagnie
+ 	VALUES('XYZ','Arearn','(514)777-9999','Arearn@transport.ca',2)
+/
 COMMIT
 /
