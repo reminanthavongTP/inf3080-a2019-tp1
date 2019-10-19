@@ -27,7 +27,7 @@ SET ECHO ON
 -- Devrait pas fonctionner car noTelephone depasse la contrainte
 -- 
 INSERT INTO tp1TestClient
- 	VALUES(1,'Luc','Samson','(999)999-9999999999','luc.samson@email.ca')
+ 	VALUES(2,'Luc','Samson','(999)999-9999999999','luc.samson@email.ca')
 /
 COMMIT
 /
