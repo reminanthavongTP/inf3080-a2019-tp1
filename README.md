@@ -12,8 +12,36 @@
 
    ## Fonctionnement
 
-   <expliquez brièvement comment faire fonctionner votre projet, en inscrivant
-   au moins deux exemples d'utilisation (commande lancée et résultat affiché)>
+   1 - Charger le schema dans sqlplus (@01_schema.sql)
+   
+   2 - Charger les entres dans sqlplus (@02_charger.sql)
+   
+   3 - Exemple a) Pour afficher tous les demande de soumission fait par les clients en affichant seulement Origine et Destination
+                  SELECT pclient,origine,destination FROM tp1DemandeSoumission;
+                    PCLIENT    ORIGINE              DESTINATION
+                    ---------- -------------------- --------------------
+                    1          Toronto              Ottawa
+                    1          Calgary              Montreal
+                    2          Vancouver            Ottawa
+                    3          Quebec               Toronto
+                    4          Montreal             Toronto
+                    
+        Exemple b) Pour afficher liste les camions qui sont presentement en voyage
+                  SELECT tp1typequipement.tracteur, tp1camion.pcamion, tp1position.ndisponible 
+                  FROM ((tp1compagnie
+                  INNER JOIN tp1camion ON tp1Compagnie.pcompagnie = tp1camion.pcompagnie)
+                  INNER JOIN tp1position ON tp1camion.pcamion = tp1position.pcamion)
+                  WHERE tp1position.ndisponible = 0;
+                  
+                  ou
+                  
+                  @04a_query.sql
+
+               NOMCOMPAGNIE            PCAMION CPOSITION                      NDISPONIBLE
+               -------------------- ---------- ------------------------------ -----------
+                  Earenam                       7 AWAY                                     0
+                  Senoine                       8 AWAY                                     0
+
 
    ## Contenu du projet
 
