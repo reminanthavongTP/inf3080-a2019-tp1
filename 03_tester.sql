@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS Tbl_TestName
+ 
+CREATE TABLE Tbl_TestName
+(Id INT , DefName VARCHAR(100))
+ 
+ 
+INSERT INTO Tbl_TestName 
+VALUES (1,'Apple') ,  (2,'Avocado'),  (3 , 'Carrot')
+GO
+CREATE OR ALTER FUNCTION GetProductName (@Nm INT)
+RETURNS VARCHAR(100)
+BEGIN
+DECLARE @RetVal AS VARCHAR(100)
+ 
+SELECT  @RetVal = CASE @Nm  WHEN 1 THEN (SELECT TOP 1 DefName FROM Tbl_TestName 
+ORDER BY Id DESC)
+WHEN 2 THEN 'Tomato'
+WHEN 3 THEN 'Banana'
+ELSE
+'Not Found'
+END
+RETURN  @RetVal
+END
