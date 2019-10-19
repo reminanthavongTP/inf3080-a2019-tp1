@@ -53,11 +53,11 @@ CREATE TABLE tp1Route
 (pSoumission 		INTEGER 		NOT NULL,
  pRoute 		VARCHAR(30) 	NOT NULL,
  cRoute 		VARCHAR(30) 	NOT NULL,
- nLatOri 	FLOAT(8) 	NOT NULL,
- nLongOri 	FLOAT(8) 	NOT NULL,
- nLatDes 		FLOAT(8) 		NOT NULL,
- nLongDes 		FLOAT(8) 		NOT NULL,
- nDistance 		FLOAT(8) 		NOT NULL,
+ nLatOri 	NUMBER(8,5) 	NOT NULL,
+ nLongOri 	NUMBER(8,5) 	NOT NULL,
+ nLatDes 		NUMBER(8,5) 		NOT NULL,
+ nLongDes 		NUMBER(8,5) 		NOT NULL,
+ nDistance 		NUMBER(8,5) 		NOT NULL,
  PRIMARY KEY 	(pRoute),
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
@@ -87,7 +87,7 @@ CREATE TABLE tp1TypeEquipement
 (pCamion 		INTEGER 		NOT NULL,
  pTypeEquipement INTEGER NOT NULL,
  cTypeEquipement VARCHAR(30) NOT NULL,
- nCout FLOAT(8) NOT NULL,
+ nCout NUMBER(8,2) NOT NULL,
  PRIMARY KEY    (pTypeEquipement),
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
 )
@@ -96,8 +96,8 @@ CREATE TABLE tp1Position
 (pCamion 		INTEGER 		NOT NULL,
  pPosition		VARCHAR(30) 	NOT NULL,
  cPosition 		VARCHAR(30) 	NOT NULL,
- nLat 	FLOAT(8) 	NOT NULL,
- nLong 	FLOAT(8) 	NOT NULL,
+ nLat 	NUMBER(8,5) 	NOT NULL,
+ nLong  NUMBER(8,5)	NOT NULL,
  nDisponible		INTEGER		NOT NULL,
  PRIMARY KEY    (pPosition),
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
