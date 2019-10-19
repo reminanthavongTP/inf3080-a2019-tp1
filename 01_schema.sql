@@ -68,7 +68,7 @@ CREATE TABLE tp1Proposition
  datePickup 	DATE 	NOT NULL,
  dateDelivery 		DATE 		NOT NULL,
  prixLivraison		FLOAT(6) 		NOT NULL,
- tCamion		VARCHAR(20) 		NOT NULL,
+ tCamion		INTEGER 		NOT NULL,
  prixCarburant 	FLOAT(8) 	NOT NULL,
  consommation 		FLOAT(8) 		NOT NULL,
  margeProfit		FLOAT(3) 		DEFAULT 1.18,
