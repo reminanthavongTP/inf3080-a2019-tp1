@@ -74,9 +74,15 @@ CREATE TABLE tp1TestCompagnie
  PRIMARY KEY 	(pCompagnie)
 )
 /
+-- 
+-- Devrait fonctionner
+-- 
 INSERT INTO tp1TestCompagnie
  	VALUES(1,'Earenam','(999)888-9999','Earenam,@transport.ca',2)
 /
+-- 
+-- Devrait pas fonctionner car pCompagnie doit etre en format INT non String
+-- 
 INSERT INTO tp1TestCompagnie
  	VALUES('XYZ','Arearn','(514)777-9999','Arearn@transport.ca',2)
 /
