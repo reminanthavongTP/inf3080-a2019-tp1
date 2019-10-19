@@ -180,6 +180,12 @@ INSERT INTO tp1Camion
 INSERT INTO tp1Camion
  	VALUES(6,3,11.7,6.0,5.5,396.0,1)
 /
+INSERT INTO tp1Camion
+ 	VALUES(7,1,11.7,6.0,5.5,396.0,1)
+/
+INSERT INTO tp1Camion
+ 	VALUES(8,3,11.7,6.0,5.5,396.0,1)
+/
 INSERT INTO tp1TypeEquipement
  	VALUES(1,001,'Flatbed',0.02)
 /
@@ -198,6 +204,12 @@ INSERT INTO tp1TypeEquipement
 INSERT INTO tp1TypeEquipement
  	VALUES(6,006,'DryBox',0.05)
 /
+INSERT INTO tp1TypeEquipement
+ 	VALUES(7,007,'DryBox',0.05)
+/
+INSERT INTO tp1TypeEquipement
+ 	VALUES(8,008,'DryBox',0.05)
+/
 INSERT INTO tp1Position
  	VALUES(1,'Earenam1','GarageTORONTO',43.6532,79.3832,1)
 /
@@ -215,6 +227,12 @@ INSERT INTO tp1Position
 /
 INSERT INTO tp1Position
  	VALUES(6,'Senoine2','GarageCALGARY',51.0447,114.0719,1)
+/
+INSERT INTO tp1Position
+ 	VALUES(7,'Earenam3,'AWAY',48.8316,64.4869,0)
+/
+INSERT INTO tp1Position
+ 	VALUES(8,'Senoine3','AWAY',48.8316,64.4869,0)
 /
 COMMIT
 /
