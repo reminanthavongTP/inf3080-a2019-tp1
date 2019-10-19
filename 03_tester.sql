@@ -1,38 +1,34 @@
-EXEC tsqlt.NewTestClass 'Func_ProductTest'
+CREATE TABLE scale_data (
+   section NUMERIC NOT NULL,
+   id1     NUMERIC NOT NULL,
+   id2     NUMERIC NOT NULL,
+   UNIQUE  (section, id1)
+);
+
+DECLARE @section INT
+SET @section = 10
+
+WHILE (@section >= 0) BEGIN
+
+   WITH generate_series (n) AS (
+      SELECT 1
+      UNION ALL
+      SELECT n + 1
+        FROM generate_series
+       WHERE N < 3000
+   ), generate_series2 (n) AS (
+      SELECT ROW_NUMBER() OVER(ORDER BY g1.n, g2.n)
+        FROM generate_series g1
+       CROSS JOIN generate_series g2
+       WHERE g2.n <= @section
+   )
+   INSERT INTO scale_data
+   SELECT @section, gen.*
+        , CEILING(ABS(CAST(NEWID() AS BINARY(6)) %100))
+     FROM generate_series2 gen
+    WHERE gen.n <= @section * 3000
+   OPTION(MAXRECURSION 32767);
+
+   SET @section = @section -1
+END;
 GO
-CREATE OR ALTER PROCEDURE Func_ProductTest.[test GetProductName casewhen1withfaketable  Expected_Mango]
-AS
-DECLARE @Expected AS VARCHAR(100)='Mango'
-DECLARE @Actual AS VARCHAR(100)
-EXEC tSQLt.FakeTable 'Tbl_TestName'
-INSERT INTO Tbl_TestName VALUES (1,'Watermelon')
-INSERT INTO Tbl_TestName VALUES (2,'Grape')
-INSERT INTO Tbl_TestName VALUES (3,'Mango')
-SELECT @Actual = dbo.GetProductName(1)
-EXEC tSQLt.AssertEquals @Expected,@Actual
-GO
- 
-CREATE OR ALTER PROCEDURE Func_ProductTest.[test GetProductName casewhen2 Expected_Tomato]
-AS
-DECLARE @Expected AS VARCHAR(100)='Tomato'
-DECLARE @Actual AS VARCHAR(100)
-SELECT @Actual = dbo.GetProductName(2)
-EXEC tSQLt.AssertEquals @Expected,@Actual
-GO
- 
-CREATE OR ALTER PROCEDURE Func_ProductTest.[test GetProductName casewhen3 Expected_Banana]
-AS
-DECLARE @Expected AS VARCHAR(100)='Banana'
-DECLARE @Actual AS VARCHAR(100)
-SELECT @Actual = dbo.GetProductName(3)
-EXEC tSQLt.AssertEquals @Expected,@Actual
-GO
-CREATE OR ALTER PROCEDURE Func_ProductTest.[test GetProductName casewhenelse Expected_NotFound]
-AS
-DECLARE @Expected AS VARCHAR(100)='Not Found'
-DECLARE @Actual AS VARCHAR(100)
-SELECT @Actual = dbo.GetProductName(4)
-EXEC tSQLt.AssertEquals @Expected,@Actual
-GO
- 
-EXEC tSQLt.Run 'Func_ProductTest'
