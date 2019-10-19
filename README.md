@@ -16,8 +16,9 @@
    
    2 - Charger les entres dans sqlplus (@02_charger.sql)
    
-   3 - Exemple a) Pour afficher tous les demande de soumission fait par les clients en affichant seulement Origine et Destination
-                  SELECT pclient,origine,destination FROM tp1DemandeSoumission;
+   3 -  Exemple a) Pour afficher tous les demande de soumission fait par les clients en affichant seulement Origine et Destination
+                  
+                    SELECT pclient,origine,destination FROM tp1DemandeSoumission;
                     PCLIENT    ORIGINE              DESTINATION
                     ---------- -------------------- --------------------
                     1          Toronto              Ottawa
