@@ -62,21 +62,6 @@ CREATE TABLE tp1Route
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
 /
-CREATE TABLE tp1Proposition
-(pProposition 		INTEGER 		NOT NULL,
- pSoumission 		INTEGER 		NOT NULL,
- datePickup 	DATE 	NOT NULL,
- dateDelivery 		DATE 		NOT NULL,
- prixLivraison		FLOAT(6) 		NOT NULL,
- pTypeEquipement INTEGER NOT NULL,
- prixCarburant 	FLOAT(8) 	NOT NULL,
- consommation 		FLOAT(8) 		NOT NULL,
- margeProfit		FLOAT(3) 		DEFAULT 1.18,
- PRIMARY KEY 	(pProposition),
- FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission,
- FOREIGN KEY 	(pTypeEquipement) REFERENCES tp1TypeEquipement
-)
-/
 CREATE TABLE tp1Compagnie
 (pCompagnie 		INTEGER 		NOT NULL,
  nomCompagnie 		VARCHAR(20) 	NOT NULL,
@@ -93,7 +78,7 @@ CREATE TABLE tp1Camion
  width 		FLOAT  	NOT NULL,
  height 	FLOAT  	NOT NULL,
  capacity	FLOAT  	NOT NULL,
- tracteur INTERGET NOT NULL,
+ tracteur INTEGER NOT NULL,
  PRIMARY KEY 	(pCamion),
  FOREIGN KEY 	(pCompagnie) REFERENCES tp1Compagnie
 )
@@ -116,6 +101,21 @@ CREATE TABLE tp1Position
  nDisponible		INTEGER		NOT NULL,
  PRIMARY KEY    (pPosition),
  FOREIGN KEY 	(pCamion) REFERENCES tp1Camion
+)
+/
+CREATE TABLE tp1Proposition
+(pProposition 		INTEGER 		NOT NULL,
+ pSoumission 		INTEGER 		NOT NULL,
+ datePickup 	DATE 	NOT NULL,
+ dateDelivery 		DATE 		NOT NULL,
+ prixLivraison		FLOAT(6) 		NOT NULL,
+ pTypeEquipement INTEGER NOT NULL,
+ prixCarburant 	FLOAT(8) 	NOT NULL,
+ consommation 		FLOAT(8) 		NOT NULL,
+ margeProfit		FLOAT(3) 		DEFAULT 1.18,
+ PRIMARY KEY 	(pProposition),
+ FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission,
+ FOREIGN KEY 	(pTypeEquipement) REFERENCES tp1TypeEquipement
 )
 /
 COMMIT
