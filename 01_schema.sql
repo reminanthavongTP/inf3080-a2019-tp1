@@ -45,6 +45,7 @@ CREATE TABLE tp1DemandeSoumission
  hours 	FLOAT  	NOT NULL,
  valeur 	INTEGER  	NOT NULL,
  pClient 		INTEGER 		NOT NULL,
+ CHECK (quantity>0),
  PRIMARY KEY 	(pSoumission),
  FOREIGN KEY 	(pClient) REFERENCES tp1Client
 )
@@ -58,6 +59,7 @@ CREATE TABLE tp1Route
  nLatDes 		FLOAT(8) 		NOT NULL,
  nLongDes 		FLOAT(8) 		NOT NULL,
  nDistance 		FLOAT(8) 		NOT NULL,
+ CHECK (nDistance>0),
  PRIMARY KEY 	(pRoute),
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission
 )
@@ -67,7 +69,8 @@ CREATE TABLE tp1Compagnie
  nomCompagnie 		VARCHAR(20) 	NOT NULL,
  noTelephone 	VARCHAR(15) 	NOT NULL,
  email 	VARCHAR(50) 	NOT NULL,
- nbCamion INTEGER NOT NULL,
+ nbCamion INTEGER NOT NULL, 
+ CHECK (nbCamion>=1)
  PRIMARY KEY 	(pCompagnie)
 )
 /
@@ -113,6 +116,7 @@ CREATE TABLE tp1Proposition
  prixCarburant 	FLOAT(8) 	NOT NULL,
  consommation 		FLOAT(8) 		NOT NULL,
  margeProfit		FLOAT(3) 		DEFAULT 1.18,
+ CHECK (datePickup<=dateDelivery)
  PRIMARY KEY 	(pProposition),
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission,
  FOREIGN KEY 	(pTypeEquipement) REFERENCES tp1TypeEquipement
