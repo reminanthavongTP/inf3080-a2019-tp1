@@ -4,7 +4,7 @@ SET ECHO ON
 -- Test de la BD
 -- 
 SET ECHO ON
-DROP TABLE tp1Client CASCADE CONSTRAINTS
+DROP TABLE tp1TestClient CASCADE CONSTRAINTS
 /
 DROP TABLE tp1TestDemandeSoumission CASCADE CONSTRAINTS
 /
@@ -19,14 +19,12 @@ CREATE TABLE tp1TestClient
  PRIMARY KEY 	(pClient)
 )
 /
-SET ECHO ON
 -- 
 -- Devrait fonctionner
 -- 
 INSERT INTO tp1TestClient
  	VALUES(1,'Luc','Samson','(999)999-9999','luc.samson@email.ca')
 /
-SET ECHO ON
 -- 
 -- Devrait pas fonctionner car noTelephone depasse la contrainte
 -- 
