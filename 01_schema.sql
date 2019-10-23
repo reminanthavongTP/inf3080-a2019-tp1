@@ -116,7 +116,7 @@ CREATE TABLE tp1Proposition
  prixCarburant 	FLOAT(8) 	NOT NULL,
  consommation 		FLOAT(8) 		NOT NULL,
  margeProfit		FLOAT(3) 		DEFAULT 1.18,
- CHECK (datePickup<=dateDelivery)
+ CHECK (datePickup<=dateDelivery),
  PRIMARY KEY 	(pProposition),
  FOREIGN KEY 	(pSoumission) REFERENCES tp1DemandeSoumission,
  FOREIGN KEY 	(pTypeEquipement) REFERENCES tp1TypeEquipement
