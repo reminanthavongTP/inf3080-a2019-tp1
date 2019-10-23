@@ -70,8 +70,8 @@
 
    ## Statut
 
-   <indiquez si le projet est complété ou s'il y a des bogues>
+   Le projet est complété.
    
    ## Auto-évaluation de votre travail
    
-   J'évalue mon livrable à x points
+   J'évalue mon livrable à 10 points / 15
