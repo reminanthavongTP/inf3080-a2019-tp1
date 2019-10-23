@@ -70,7 +70,7 @@ CREATE TABLE tp1Compagnie
  noTelephone 	VARCHAR(15) 	NOT NULL,
  email 	VARCHAR(50) 	NOT NULL,
  nbCamion INTEGER NOT NULL, 
- CHECK (nbCamion>=1)
+ CHECK (nbCamion>=1),
  PRIMARY KEY 	(pCompagnie)
 )
 /
