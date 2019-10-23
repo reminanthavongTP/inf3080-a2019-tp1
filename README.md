@@ -67,6 +67,8 @@
    ## Références
 
   https://www.w3schools.com/sql/
+  
+  https://www.oracletutorial.com/oracle-basics/
 
    ## Statut
 
